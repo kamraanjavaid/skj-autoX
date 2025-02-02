@@ -1,0 +1,116 @@
+.main-container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 0, 0); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  position: relative;
+}
+
+.main-upper {
+  background-color: #99582a; 
+  width: 40%;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; 
+  border-radius: 20px; 
+}
+
+.main-upper-right {
+  background-color: #99582a; 
+  width: 40%;
+  height: 400px;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px; 
+}
+
+.main-heading-left, .main-heading-right {
+  color: #ced4da; 
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.car-image {
+  width: 40%;
+  height: auto;
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%); 
+  z-index: 10; 
+}
+
+.right-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 80%;
+  justify-items: center;
+}
+
+.right-boxes .box {
+  width: 150px;
+  height: 120px;
+  margin: 20px;
+  background-color: #ffe6a7; 
+  color: #001427;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease;
+}
+
+.right-boxes .box:hover {
+  color: white;
+  background-color: #b50600; 
+  transform: translateY(-5px); 
+}
+
+.main-four-features {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #d0d0d0; 
+}
+
+.main-four-features li {
+  list-style: none;
+  line-height: 25px;
+}
+
+.main-h1-heading {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff; 
+}
+
+@media (max-width: 768px) {
+  .main-upper{
+    background-color: black;
+  }
+  .main-upper-right{
+background-color: black;
+}
+  .main-four-features{
+    display: none;
+  }
+  .right-boxes .box{
+    margin: 0%;
+    width: 100px;
+    height: 100px;
+    color: rgb(255, 255, 255);
+    background-color: black;
+  }
+}

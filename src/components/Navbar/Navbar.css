@@ -1,0 +1,70 @@
+.nav-container {
+    display: flex;
+    width: 100%;
+    line-height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    color: white;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-title img {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+}
+
+.nav-content {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-content li {
+    list-style: none;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-content li:hover {
+    color: #ffcc00; 
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .nav-content {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-content.active {
+        display: flex;
+    }
+
+    .nav-content li {
+        padding: 10px;
+        width: 100%;
+    }
+
+    /* Show Hamburger Icon */
+    .menu-icon {
+        display: block;
+    }
+}

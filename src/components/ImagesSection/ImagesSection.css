@@ -1,0 +1,83 @@
+.images-container{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+.images-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+/* First row */
+.row-top {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transform-origin: center;
+}
+
+.row-top img {
+    width: 48%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+/* Second row */
+.row-bottom {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    width: 100%;
+    transform-origin: center;
+}
+
+/* Left side */
+.left img {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Middle section (Car 4 & Car 5) */
+.middle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2;
+}
+
+.middle img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Right side */
+.right img {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .row-bottom .left, .right{
+        height: 300px;
+        object-fit:scale-down;
+    }
+    .middle {
+        height: 300px;
+        object-fit: contain;
+    }
+}
